@@ -24,4 +24,8 @@ sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/dsinfo/main/install)
 -k: get kernel version
 
 -h: list program options
+
+-vn: distro version then name
+
+-a: list all the main info
 ```
