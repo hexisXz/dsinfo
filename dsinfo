@@ -16,7 +16,12 @@ support(){
 name(){
     cat /etc/os-release | grep -i NAME | awk -F "=" '{print $2}' | awk -F '"' '{print $2}' | sed -n 'n;p'
 }
-    
+
+
+kernel_ver(){
+          cat /proc/version | awk '{print $3}'
+}
+
 
 case $1 in
      -nv)
@@ -36,7 +41,37 @@ case $1 in
         name
 	;;
 
-       *)
+      -k)
+        kernel_ver
 	;;
 
+      -h)
+        echo "
+	-nv: distro name & version
+
+        -v: distro version
+
+	-s: distro support page
+
+        -n: distro name
+
+	-k: get kernel version
+
+	-h: list program options"
+	;;
+
+       *)
+        echo "
+	-nv: distro name & version
+
+        -v: distro version
+
+	-s: distro support page
+
+        -n: distro name
+
+	-k: get kernel version
+
+	-h: list program options"
+	;;
 esac

@@ -20,4 +20,8 @@ sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/dsinfo/main/install)
 -s: distro support page
 
 -n: distro name
+
+-k: get kernel version
+
+-h: list program options
 ```
