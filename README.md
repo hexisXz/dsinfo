@@ -5,7 +5,9 @@ distro information program.
 
 # install 
 
-
+``` sh
+sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/dsinfo/main/install)
+```
 
 
 # usage 
