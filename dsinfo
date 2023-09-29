@@ -1,20 +1,20 @@
 #!/bin/sh 
 
 name_ver(){
-	cat /etc/os-release | grep -i PRETTY_NAME | awk -F "=" '{print $2}' | awk -F '"' '{print $2}'
+	grep -i PRETTY_NAME /etc/os-release | awk -F "=" '{print $2}' | awk -F '"' '{print $2}'
 }
 
 
 ver(){
-    cat /etc/os-release | grep -i VERSION_ID | awk -F "=" '{print $2}' | awk -F '"' '{print $2}'
+    grep -i VERSION_ID /etc/os-release | awk -F "=" '{print $2}' | awk -F '"' '{print $2}'
 }
 
 support(){
-       cat /etc/os-release | grep -i SUPPORT_URL | awk -F "=" '{print $2}' | awk -F '"' '{print $2}'
+       grep -i SUPPORT_URL /etc/os-release | awk -F "=" '{print $2}' | awk -F '"' '{print $2}'
 }
 
 name(){
-    cat /etc/os-release | grep -i NAME | awk -F "=" '{print $2}' | awk -F '"' '{print $2}' | sed -n 'n;p'
+    grep -i NAME /etc/os-release | awk -F "=" '{print $2}' | awk -F '"' '{print $2}' | sed -n 'n;p'
 }
 
 
