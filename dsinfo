@@ -1,0 +1,42 @@
+#!/bin/sh 
+
+name_ver(){
+	cat /etc/os-release | grep -i PRETTY_NAME | awk -F "=" '{print $2}' | awk -F '"' '{print $2}'
+}
+
+
+ver(){
+    cat /etc/os-release | grep -i VERSION_ID | awk -F "=" '{print $2}' | awk -F '"' '{print $2}'
+}
+
+support(){
+       cat /etc/os-release | grep -i SUPPORT_URL | awk -F "=" '{print $2}' | awk -F '"' '{print $2}'
+}
+
+name(){
+    cat /etc/os-release | grep -i NAME | awk -F "=" '{print $2}' | awk -F '"' '{print $2}' | sed -n 'n;p'
+}
+    
+
+case $1 in
+     -nv)
+	name_ver
+	;;
+
+
+      -v)
+	ver
+	;;
+
+      -s)
+        support
+	;;
+
+      -n)
+        name
+	;;
+
+       *)
+	;;
+
+esac

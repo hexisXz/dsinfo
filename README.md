@@ -1,2 +1,21 @@
 # dsinfo
-a faster version of  lsb_release.
+
+distro information program.
+
+
+# install 
+
+
+
+
+# usage 
+
+```
+-nv: distro name & version
+
+-v: distro version
+
+-s: distro support page
+
+-n: distro name
+```
